@@ -1,0 +1,13 @@
+AndroidDevices.xml
+test-results.txt
+.signing/
+android/build/
+*.exe
+*.apk
+*.apk.idsig
+*.zip
+tools/*.dll
+tools/adb.exe
+preview-example-*.png
+publish-local/
+.github-cli/
