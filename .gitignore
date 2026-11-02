@@ -11,3 +11,16 @@ tools/adb.exe
 preview-example-*.png
 publish-local/
 .github-cli/
+
+# eigen repo (rpg86x/codex-dash)
+.publish-codex-dash/
+# persoonlijke systeemlogs/audits, niet publiek
+storage-audit-*.json
+*.log
+windows-startmenu-diagnose.txt
+catch-up-move-result.json
+Windows Backup 1.0/Diagnose-*.txt
+# bevatten persoonlijke denylists, niet publiek
+audit-cma-public.cjs
+verify-cma-public.ps1
+prepare-cma-public.ps1

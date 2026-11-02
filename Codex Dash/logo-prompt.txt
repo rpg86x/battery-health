@@ -1,0 +1,3 @@
+Generated with the built-in image generation tool.
+
+Use case: logo-brand. Create a polished Windows application logo for Codex Dash, a personal permissions dashboard, visually belonging with a dark charcoal and mint-green productivity app. One centered square app icon: dark charcoal rounded-square tile, bold mint-green stylized letter D whose interior suggests a simple dashboard with three clean rectangular panels and a small permission check accent. Minimal flat geometric design, crisp silhouettes, generous margins, readable at 32 pixels, restrained subtle depth. No words, no extra letters, no OpenAI knot logo, no mockup, no surrounding objects. Transparent outside the rounded-square tile. Single finished icon.

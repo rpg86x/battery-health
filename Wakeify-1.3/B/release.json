@@ -1,0 +1,22 @@
+{
+  "app": "Wakeify",
+  "platform": "Android",
+  "version": "1.3",
+  "versionCode": 13,
+  "status": "candidate",
+  "applicationId": "com.wakelight.v13",
+  "preservedVersion": "1.2",
+  "musicLagDefaultMinutes": 5,
+  "musicLagChoicesMinutes": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30
+  ],
+  "scheduleInitiallyEnabled": false,
+  "validation": "22 schedule/timeline cases passed. Installed beside 1.2 on physical S10. Notification access granted by user. Actual Spotify resume confirmed by PLAYING; Spotify paused after test. Page 2 UI inspected; final other screenshots limited by lockscreen. 1.2 active 07:15 schedule preserved, 1.3 schedule off and delay five minutes. Overnight and live 30-minute delay not tested.",
+  "apkSha256": "C462A04D2231929844C2A0DF3DD86B3B8582802E87F5B46CDE54A7C9C13851E4"
+}

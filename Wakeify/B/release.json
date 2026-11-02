@@ -1,0 +1,25 @@
+{
+  "app": "Wakeify",
+  "platform": "Android",
+  "version": "1.2",
+  "versionCode": 12,
+  "status": "candidate",
+  "applicationId": "com.wakelight",
+  "defaults": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Sunday"
+    ],
+    "time": "07:15",
+    "automaticOffMinutes": 10,
+    "fridayTime": "08:00",
+    "sundayTime": "09:00"
+  },
+  "validation": "13 schedule tests passed, including Friday 08:00 and Sunday 09:00. Earlier physical S10 screen-off torch test passed. Stored full schedule checked on S10; Thursday 15 October 07:15 remains next. Overnight and reboot not tested.",
+  "apkSha256": "398BCA920E147F244C283C043ACD15135C18B8360B54E327ACF08E3E5C45B8F0",
+  "configuredNext": "2026-10-15T07:15:00+02:00"
+}

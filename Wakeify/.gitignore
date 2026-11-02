@@ -1,0 +1,7 @@
+**/build/
+**/tests/out/
+**/android/
+*.keystore
+*.jks
+*.idsig
+*.png

@@ -1,0 +1,8 @@
+priority-scores.json
+priority-scores.json.*
+test-fixture/
+check.txt
+self-test.txt
+preview.png
+*.tmp
+*.lnk

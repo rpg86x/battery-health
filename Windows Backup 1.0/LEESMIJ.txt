@@ -1,0 +1,29 @@
+Windows Backup 1.0 - herstelcode, 13 oktober 2026
+
+Dit pakket bewaart de diagnose en herstelstappen voor taakbalk/startmenu.
+Het is GEEN volledige Windows-back-up, systeemimage of herstelpunt.
+Je persoonlijke bestanden en de volledige Windows-configuratie zitten er niet in.
+
+Wat werkte op 13 oktober 2026:
+Een volledige Windows-herstart. Daarna bevestigde de gebruiker dat het startmenu
+weer werkte en appvensters vermoedelijk weer rekening hielden met de taakbalk.
+Alleen processen herstarten en het startmenu opnieuw registreren was onvoldoende.
+
+Gebruik bij terugkeer van hetzelfde probleem:
+1. Sla open werk op en herstart Windows normaal.
+2. Werkt dat niet? Open Start.cmd voor diagnose of een gerichte startmenuherstelpoging.
+   Gebruik dit onder je eigen account, zonder 'Als administrator uitvoeren'.
+   De hersteloptie sluit mogelijk Verkenner-vensters.
+3. Voor systeembestandherstel: open Windows PowerShell ALS ADMINISTRATOR en voer uit:
+   & 'D:\Windows Backup 1.0\Herstel-Startmenu.ps1' -Actie Systeembestanden
+   DISM kan internet gebruiken en lang duren. Laat het eindresultaat verschijnen.
+
+Het pakket herstart de pc nooit automatisch. Logboeken komen in de map Logs.
+De eerdere DISM-controle vond ontbrekende/beschadigde bestanden, maar bleef
+wachten op Windows Update. Er is geen bevestigd succesvol eindresultaat.
+SFC was vóór de herstart nog niet begonnen.
+
+Bron voor de startmenuregistratie:
+https://learn.microsoft.com/nl-nl/troubleshoot/windows-client/shell-experience/troubleshoot-start-menu-errors
+
+Diagnose-2026-10-13.txt en het oude reparatielogboek bewaren de eerdere bevindingen.
