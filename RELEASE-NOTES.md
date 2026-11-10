@@ -1,3 +1,9 @@
+Battery Health 1.1 adds battery session tracking on Windows.
+
+- Background logger records how long each on-battery session lasts and how long charging takes (CSV in %LOCALAPPDATA%\Battery Health).
+- New Sessions window with live current session, history, and averages for full runtime and full charge time; sleep time excluded.
+- install.ps1 installs per user, adds a desktop shortcut and starts the logger at logon.
+
 Battery Health 1.0 provides a portable Windows app and a signed Android companion APK.
 
 - Windows laptop battery health, design capacity, full-charge capacity, cycle count, current charge and estimated runtime.
