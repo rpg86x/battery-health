@@ -15,12 +15,12 @@ class BatteryHealth : Form
     Button refresh = new Button();
     BackgroundWorker worker = new BackgroundWorker();
     Label title, foot;
-    Button dutch, english;
+    Button dutch, english, sessions;
     bool useEnglish, readFailed;
     Result lastResult;
     public BatteryHealth()
     {
-        Text = "Battery Health"; ClientSize = new Size(620, 570);
+        Text = "Battery Health 1.1"; ClientSize = new Size(620, 570);
         MinimumSize = new Size(636, 609); MaximumSize = MinimumSize;
         StartPosition = FormStartPosition.CenterScreen;
         BackColor = Color.FromArgb(245, 247, 251);
@@ -29,6 +29,9 @@ class BatteryHealth : Form
         Button android = new Button { Text = "Android / Wi-Fi", Location = new Point(30, 20), Size = new Size(180, 36), FlatStyle = FlatStyle.Flat };
         android.Click += delegate { new AndroidDashboard(useEnglish).Show(this); };
         Controls.Add(android);
+        sessions = new Button { Location = new Point(222, 20), Size = new Size(150, 36), FlatStyle = FlatStyle.Flat };
+        sessions.Click += delegate { new SessionsForm(useEnglish).Show(this); };
+        Controls.Add(sessions);
         title = new Label { Location = new Point(28, 70), Size = new Size(570, 38), Font = new Font("Segoe UI", 20, FontStyle.Bold) };
         status.SetBounds(30, 122, 560, 48);
         health.SetBounds(28, 177, 560, 76); health.Font = new Font("Segoe UI", 40, FontStyle.Bold);
@@ -104,7 +107,7 @@ class BatteryHealth : Form
     }
     void Render()
     {
-        title.Text = Localize("Hoe gezond is je batterij?"); refresh.Text = Localize("Opnieuw meten");
+        title.Text = Localize("Hoe gezond is je batterij?"); refresh.Text = Localize("Opnieuw meten"); sessions.Text = useEnglish ? "Sessions" : "Sessies";
         foot.Text = Localize("Capaciteit volgens de laptopfirmware.\nGebruiksduur is een schatting van Windows.");
         dutch.FlatAppearance.BorderSize = useEnglish ? 1 : 3; english.FlatAppearance.BorderSize = useEnglish ? 3 : 1;
         dutch.FlatAppearance.BorderColor = useEnglish ? Color.LightGray : Color.RoyalBlue;
@@ -181,6 +184,8 @@ class BatteryHealth : Form
             catch (Exception ex) { Console.WriteLine(ex.GetType().Name + ": " + ex.Message); Environment.ExitCode = 1; }
             return;
         }
+        if (args.Length > 0 && args[0] == "--log") { SessionLog.Run(); return; }
+        SessionLog.StartBackground();
         Application.EnableVisualStyles(); Application.SetCompatibleTextRenderingDefault(false); Application.Run(new BatteryHealth());
     }
 }

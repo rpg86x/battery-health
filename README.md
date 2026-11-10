@@ -16,6 +16,10 @@ Launch `Battery Health.exe`. The app shows battery health relative to design cap
 
 Battery health is full-charge capacity divided by design capacity. For multiple laptop batteries, available capacities are combined. Firmware measurements can be unavailable or exceed 100% due to factory margin/calibration. The health percentage is separate from current charge level.
 
+## Battery sessions (1.1)
+
+A background logger (`Battery Health.exe --log`) samples the power status every 30 seconds and records each **on-battery session** (unplug → plug in) and each **charge session** (charging starts → stops/full) to `%LOCALAPPDATA%\Battery Health\sessions.csv`. Click **Sessions** to see them, with time spent asleep excluded and an estimated full 100→0% runtime and 0→100% charge time. Run `install.ps1` to install for the current user and start the logger at every logon. Sessions shorter than 2 minutes or with no change in charge are ignored.
+
 ## Android over Wi-Fi
 
 1. Install `Battery Health Android.apk` and open it on your device.
